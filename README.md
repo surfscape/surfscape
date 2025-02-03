@@ -1,2 +1,3 @@
-# surfscape
-Monorepo for the web portal and projects sites
+# SurfScape
+
+Rewrite of SurfScape with new features and new base, built with Astro 5.

@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.05rem;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+:focus,
+:focus-visible {
+  outline-offset: 1px;
+  outline: 3px solid hsla(214, 83%, 55%, 0.75);
+  transition: all 100ms ease-in-out;
+}

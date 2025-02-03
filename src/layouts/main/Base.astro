@@ -1,0 +1,19 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@utils/meta.ts";
+
+const { title, description, steel_class } = Astro.props;
+
+const page_title = title || SITE_TITLE;
+const page_desription = description || SITE_DESCRIPTION;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={page_title} description={page_desription} />
+  </head>
+  <body class={steel_class}>
+    <slot />
+  </body>
+</html>
