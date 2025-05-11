@@ -1,0 +1,32 @@
+<header id="app-header">
+    <a class="header__title" href="/index" aria-label="Go to home" title="Go to home">
+        <img src="/public/surfscape_logo.svg" alt="" aria-hidden="true" width="192" eleventy:ignore>
+    </a>
+    {% set navigation = collections.all | eleventyNavigation %}
+    <nav class="steel-nav">
+        {% for item in navigation %}
+            {% if item.collection == "main" %}
+                {% set isActive = (item.url == page.url)or(item.url != "/" and page.url.startsWith(item.url)) %}
+                <a class="steel-nav__link" {%if isActive %}href="" aria-current="page"{%else%}href="{{item.url}}"{%endif%}>
+                    {{ item.key }}
+                </a>
+            {% endif %}
+        {% endfor %}
+    </nav>
+    {% if eleventyNavigation.key or eleventyNavigation.parent %}
+        {% set subNav = collections.all | eleventyNavigation(eleventyNavigation.parent or eleventyNavigation.key) %}
+        {% if subNav.length > 0 %}
+            <nav class="steel-subnav">
+                <a class="steel-subnav__link" {%if not eleventyNavigation.parent %}href="" aria-current="page"{%else%}href="/{{ eleventyNavigation.parent | slugify }}"{%endif%} >Overview</a>
+                {% for item in subNav %}
+                    {% if item.url == page.url %}
+                        <a class="steel-subnav__link" href="" aria-current="page">{{item.title}}</a>
+                    {% else %}
+                        <a class="steel-subnav__link" href="{{ item.url }}">{{ item.title }}</a>
+                    {% endif %}
+
+                {% endfor %}
+            </nav>
+        {% endif %}
+    {% endif %}
+</header>

@@ -1,21 +1,47 @@
 {
-  "name": "ns-surfscape",
+  "private": "true",
+  "name": "surfscape",
+  "description": "Source code for the SurfScape website",
   "type": "module",
-  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surfscape/surfscape.git"
+  },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "start": "eleventy --serve --watch",
+    "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
+    "build": "eleventy",
+    "build:prod": "cross-env BUILD_TYPE=production eleventy",
+    "debug": "cross-env DEBUG=Eleventy* eleventy --serve"
+  },
+  "keywords": [
+    "website",
+    "eleventy"
+  ],
+  "author": "The SurfScape Team",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-img": "6.0.1",
+    "@11ty/eleventy-navigation": "1.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "autoprefixer": "^10.4.21",
+    "cheerio": "^1.0.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.6",
+    "html-minifier-terser": "^7.2.0",
+    "luxon": "^3.6.1",
+    "markdown-it": "14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-footnote": "^4.0.0",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "postcss-load-config": "^6.0.1"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "@iconify-json/lucide": "^1.2.25",
-    "astro": "^5.2.3"
-  },
-  "devDependencies": {
-    "astro-icon": "^1.1.5"
+    "eleventy-plugin-icons": "^4.5.3",
+    "lucide-static": "^0.509.0",
+    "simple-icons": "^14.13.0"
   }
 }

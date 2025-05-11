@@ -1,0 +1,48 @@
+@import url(properties.css);
+@import url(steel.css);
+
+html {
+  background: var(--app-background);
+  color: var(--steel-text-default);
+}
+
+#app {
+  margin: 0 auto;
+  max-width: var(--max-viewport);
+}
+
+#app-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+#app-header .header__title {
+  display: block;
+  margin: 0 auto;
+}
+
+#main-content {
+  padding: 1.25rem;
+}
+
+.page-header {
+  --spacer: 0.75em;
+  padding: 1.25em;
+  background: var(--app-primary-container);
+  border-bottom: var(--steel-default-border);
+}
+
+.page-header h1,
+.page-header .steel-subtitle {
+  max-width: 54ch;
+}
+
+#app-footer {
+  border-top: var(--steel-desktop-border);
+  padding: 1rem 0;
+}
+
+#app-footer > nav ~ p {
+  text-align: center;
+}

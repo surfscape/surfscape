@@ -1,0 +1,45 @@
+{% macro card(stub = false, icon = '', title = '', description = '', actions = [
+  {
+    type: 'minimal',
+    url: '',
+    icon: '',
+    label: ''
+  }
+]) %}
+  {%- if stub != true -%}
+    <section class="steel-card stack">
+      <h3>
+        {%- if icon %}
+          {% icon icon,
+          width = "16",
+          height = "16" %}
+        {%- endif -%}
+        {{ title }}
+      </h3>
+      <p>{{ description }}</p>
+      <div class="steel-flex steel-card-button-group">
+        {%- for item in actions -%}
+          <a class="steel-button steel-button--{{ item.type }}" href="{{ item.url }}">
+            {%- if item.icon -%}
+              {% icon item.icon,
+              width = "16",
+              height = "16" %}
+            {%- endif -%}
+            {{ item.label }}
+          </a>
+        {%- endfor -%}
+      </div>
+    </section>
+  {%- else -%}
+    <section class="steel-card steel-card--stub stack">
+      <h3>{{ title }}</h3>
+      <div class="steel-flex">
+        {%- for item in actions -%}
+          <a  href="{{ item.url }}">
+            {{ item.label }}
+          </a>
+        {%- endfor -%}
+      </div>
+    </section>
+  {% endif -%}
+{% endmacro %}

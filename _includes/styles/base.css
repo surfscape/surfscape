@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font: 1.15rem / var(--steel-line-height) "Geist", system-ui,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  letter-spacing: -0.01em;
+  scroll-behavior: smooth;
+  text-size-adjust: none;
+}
+
+:focus {
+  outline-offset: 2px;
+  outline: 2px solid rgb(153, 195, 255);
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0 2rem;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  font-style: italic;
+}
+
+iframe {
+  border: 0;
+}
+
+input,
+button,
+summary {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+summary {
+  cursor: default;
+}
+
+::selection {
+  color: hsl(193, 50%, 21%);
+  background: hsla(193, 95%, 60%, 0.75);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2em;
+  color: var(--app-foreground);
+}
+
+.anchor {
+  visibility: hidden;
+  font-weight: normal;
+  opacity: 0;
+}
+
+h1:hover > .anchor,
+h2:hover > .anchor,
+h3:hover > .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+
+.acs-skip {
+  position: absolute;
+  top: -100px;
+  background: var(--container);
+}
+
+.acs-skip:focus,
+.acs-skip:focus-within {
+  top: 0.25em;
+  left: 0.25em;
+}
+
+.stack > * + * {
+  --_space: var(--spacer, 0.75em);
+  --_line-height: var(--line-height, var(--steel-line-height));
+  margin-top: var(--_space);
+  line-height: var(--_line-height);
+}
+
+main {
+  hyphens: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--stroke);
+}
+
+blockquote {
+  padding: 0.5rem 1rem;
+  background: var(--container);
+  font-style: italic;
+  border-left: 0.25em solid var(--primary);
+}
+
+em {
+  font-style: normal;
+  color: var(--app-background);
+  background: var(--primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

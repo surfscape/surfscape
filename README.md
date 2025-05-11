@@ -1,3 +1,3 @@
-# SurfScape
+# SurfScape Website
 
-Rewrite of SurfScape with new features and new base, built with Astro 5.
+[Eleventy](https://www.11ty.dev/) source code to build the SurfScape project website.

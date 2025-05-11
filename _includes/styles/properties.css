@@ -1,0 +1,21 @@
+:root {
+  --max-viewport: 1024px;
+  --primary: hsl(208, 100%, 80%);
+  --on-primary: hsl(206, 32%, 15%);
+  --app-background: hsl(206, 2%, 10%);
+  --app-container: hsl(0, 0%, 24%);
+  --app-foreground: hsl(0, 0%, 96%);
+  --app-border-color: hsl(208, 5%, 25%);
+
+  --app-primary-container: #132839;
+
+  --steel-text-default: hsl(0, 0%, 81%);
+  --steel-line-height: 1.5rem;
+
+  --steel-desktop-border: 1px solid var(--app-border-color);
+  --steel-default-border: 1px solid var(--app-border-color);
+  --steel-mobile-border: 1px solid var(--app-border-color);
+
+  --steel-default-padding: 1.25rem;
+  --steel-default-lineheight-padding: calc(2.25rem - var(--steel-line-height));
+}

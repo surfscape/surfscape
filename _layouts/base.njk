@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{page.lang}}" dir="{{languages[page.lang].dir or 'ltr'}}">
+  {% include "head.njk" %}
+  <body id="app">
+    <a href="#main-content" class="acs-skip">Skip to main content</a>
+    {% if alert %}
+      <div role="alert" class="steel-notice steel-notice--{{alert.type or "info"}}">
+        {% icon alert.icon or "lucide:info",
+        width = "17",
+        height = "17" %}
+        {{alert.message}}
+      </div>
+    {% endif %}
+    {% include "navigation.njk" %}
+    <header class="page-header stack" {%if hero.backdrop %}style="background-image:url({{hero.backdrop}})"{%endif%}
+    >
+      {% if hero.title %}
+        {% set hero_title = hero.title | safe %}
+      {% endif %}
+      <h1>{{ hero_title or title or meta.title}}</h1>
+      <p class="steel-subtitle">{{hero.description or description or meta.description}}</p>
+      {% if hero.actions %}
+        <div class="steel-actions steel-flex">
+          {% for item in hero.actions %}
+            <a href="{{item.link}}" class="steel-button {% if not item.type -%}steel-button--primary{% else -%}steel-button--{{item.type}}{%- endif -%}">{{item.label}}
+              {%if item.icon %}{% icon item.icon,
+                width = "17",
+                height = "17" %}{%endif%}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </header>
+      <main>
+        {% block base %}
+          <article id="main-content" class="stack">
+            {{ content | safe }}
+          </article>
+        {% endblock base %}
+      </main>
+      {% include "footer.njk" %}
+    </body>
+  </html>

@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Geist";
+  src: url("/public/geist.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+.steel-flex,
+.steel-nav,
+.steel-subnav {
+  --_flex-gap: var(--flex-gap, 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--_flex-gap);
+}
+
+.steel-flex--list {
+  --flex-gap: 0.55rem;
+  flex-direction: column;
+}
+
+.steel-subtitle {
+  color: var(--steel-text-default);
+  font-size: 1.075em;
+}
+
+.steel-nav {
+  --flex-gap: 0.5em;
+  padding: 0.5em 0.25em;
+  justify-content: center;
+  border-bottom: var(--steel-default-border);
+}
+
+.steel-nav__link {
+  padding: 0.25rem 1rem;
+  border-radius: 0.25em;
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 115ms all ease-in-out;
+}
+
+.steel-nav__link[aria-current] {
+  color: hsl(0, 0%, 69%);
+  font-weight: 500;
+}
+
+.steel-nav__link:hover {
+  color: var(--primary);
+  background: hsla(208, 100%, 35%, 0.3);
+}
+
+.steel-subnav {
+  padding: 0 1.25rem;
+  border-bottom: var(--steel-default-border);
+}
+
+.steel-subnav__link {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.steel-subnav__link[aria-current] {
+  text-decoration: none;
+  color: var(--steel-text-default);
+}
+
+.steel-button {
+  --_btn-background: var(--btn-background, hsla(208, 100%, 80%, 0.075));
+  --_btn-foreground: var(--btn-foreground, var(--primary));
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  line-height: 1em;
+  padding: 0.6em 0.75em;
+  text-decoration: none;
+  border-radius: 0.3em;
+  background: var(--_btn-background);
+  color: var(--_btn-foreground);
+  transition: 115ms all ease-in-out;
+}
+
+.steel-button:hover {
+  --_btn-background-action: var(
+    --btn-background-action,
+    hsla(208, 100%, 80%, 0.2)
+  );
+  --_btn-foreground-action: var(--btn-foreground-action, hsl(208, 100%, 85%));
+  background: var(--_btn-background-action);
+  color: var(--_btn-foreground-action);
+}
+
+.steel-button--primary {
+  --btn-background: var(--primary);
+  --btn-foreground: #1a2832;
+  --btn-background-action: hsla(208, 72%, 73%, 0.8);
+  --btn-foreground-action: var(--btn-foreground);
+}
+
+.steel-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+  border-bottom: var(--steel-default-border);
+  padding: 0.5em 1.25rem;
+  color: hsl(207, 60%, 78%);
+  background: var(--app-primary-container);
+}
+
+.steel-card {
+  border: var(--steel-default-border);
+  padding: 1rem;
+  border-radius: 0.35em;
+}
+
+.steel-card--stub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: dashed;
+}
+
+.steel-card--stub > h3 ~ div.steel-flex {
+  gap: 0.5em 1em;
+  justify-content: center;
+}
+
+.steel-grid {
+  --_gap: var(--gap, 1rem);
+  --_breakpoint: var(--breakpoint, 320px);
+  display: grid;
+  gap: var(--_gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--_breakpoint), 1fr));
+}
