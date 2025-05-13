@@ -7,5 +7,3 @@ navigation:
 collection: main
 order: 4
 ---
-
-News
