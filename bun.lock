@@ -4,6 +4,7 @@
     "": {
       "name": "surfscape",
       "dependencies": {
+        "eleventy-plugin-console-plus": "^0.1.1",
         "eleventy-plugin-icons": "^4.5.3",
         "lucide-static": "^0.509.0",
         "simple-icons": "^14.13.0",
@@ -257,6 +258,8 @@
     "ee-first": ["ee-first@1.1.1", "", {}, "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow=="],
 
     "electron-to-chromium": ["electron-to-chromium@1.5.151", "", {}, "sha512-Rl6uugut2l9sLojjS4H4SAr3A4IgACMLgpuEMPYCVcKydzfyPrn5absNRju38IhQOf/NwjJY8OGWjlteqYeBCA=="],
+
+    "eleventy-plugin-console-plus": ["eleventy-plugin-console-plus@0.1.1", "", { "dependencies": { "escape-html": "^1.0.3" } }, "sha512-tJbwF9uXMkpdpSAGAhCfxZ4slXGbwV4rt3W326QbnztyQqAE56ODthJEXqbRlXc4E+0JFE5vm7SBkzqKsFV2YQ=="],
 
     "eleventy-plugin-icons": ["eleventy-plugin-icons@4.5.3", "", { "dependencies": { "fast-xml-parser": "^4.4.0", "just-extend": "^6.2.0", "just-memoize": "^2.2.0", "just-typeof": "^3.2.0", "kleur": "^4.1.5" } }, "sha512-vzMCeQKZ3sS9wWXqVBzqVcM0Zwg0CpCmWMBvhufeNTLkQD/eiokAdMXafW612oVOuiExT/sAdXEMi4aG9idpug=="],
 
