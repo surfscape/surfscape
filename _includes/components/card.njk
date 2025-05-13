@@ -1,30 +1,31 @@
-{% macro card(stub = false, icon = '', title = '', description = '', actions = [
-  {
-    type: 'minimal',
-    url: '',
-    icon: '',
-    label: ''
-  }
-]) %}
+{% macro card(stub = false, icon = '', title = '', list = false, description = '', labels = [], actions = [], title_image = {}) %}
   {%- if stub != true -%}
     <section class="steel-card stack">
       <h3>
-        {%- if icon %}
-          {% icon icon,
-          width = "16",
-          height = "16" %}
-        {%- endif -%}
+      {%- if title_image.src %}
+        <img src="{{ title_image.src }}" alt="{{ title_image.alt }}">
+      {%- endif -%}
         {{ title }}
       </h3>
-      <p>{{ description }}</p>
+      {%- if list -%}
+        <ul>
+          {%- for item in list -%}
+            <li>{{ item }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- else -%}
+        <p>{{ description }}</p>
+      {%- endif -%}
+      {%- if labels -%}
+        <div class="steel-flex steel-card-label-group">
+          {%- for label in labels -%}
+            <span class="steel__label">{{ label }}</span>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
       <div class="steel-flex steel-card-button-group">
         {%- for item in actions -%}
           <a class="steel-button steel-button--{{ item.type }}" href="{{ item.url }}">
-            {%- if item.icon -%}
-              {% icon item.icon,
-              width = "16",
-              height = "16" %}
-            {%- endif -%}
             {{ item.label }}
           </a>
         {%- endfor -%}
@@ -35,7 +36,7 @@
       <h3>{{ title }}</h3>
       <div class="steel-flex">
         {%- for item in actions -%}
-          <a  href="{{ item.url }}">
+          <a href="{{ item.url }}">
             {{ item.label }}
           </a>
         {%- endfor -%}

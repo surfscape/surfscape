@@ -119,9 +119,29 @@ h6 {
 }
 
 .steel-card {
+  display: flex;
+  flex-direction: column;
   border: var(--steel-default-border);
   padding: 1rem;
   border-radius: 0.35em;
+}
+
+.steel-card > h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.steel-card > h3 img {
+  width: 48px;
+  height: 48px;
+  border: var(--steel-default-border);
+  border-radius: 0.25rem;
+
+}
+
+.steel-card .steel-card-label-group {
+  --flex-gap: 0.5em;
 }
 
 .steel-card--stub {
@@ -143,4 +163,12 @@ h6 {
   display: grid;
   gap: var(--_gap);
   grid-template-columns: repeat(auto-fit, minmax(var(--_breakpoint), 1fr));
+}
+
+.steel__label {
+  border-radius: 2rem;
+  color: var(--primary);
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+  background: var(--app-primary-container);
 }
