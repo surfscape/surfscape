@@ -1,5 +1,6 @@
 ---
 title: About
+description: Learn more about the project
 collection: main
 hero:
   actions:

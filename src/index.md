@@ -41,7 +41,7 @@ We are an umbrella focused on creating software and services that respect user f
 {{ card(stub = true, title = "And more!", actions = [
   {label: "All Projects", url:"/projects/"},
   {label: "Projects on Tidepool", url:"https://surfscape.github.io/tidepool/projects/overview"},
-  {label: "Community Showcase", url:"https://surfscape.github.io/tidepool/community/showcase"}
+  {label: "Community Showcase", url:"/community/showcase"}
 ]) }}
 
 </div>

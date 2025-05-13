@@ -5,7 +5,7 @@ hero:
   backdrop: "/public/projects_hero_banner.png"
   actions:
     - label: Projects on Tidepool
-      link: "#main-content"
+      link: "https://surfscape.github.io/tidepool/projects/overview"
       icon: lucide:shapes
 collection: main
 order: 1
@@ -15,7 +15,17 @@ order: 1
 
 <div class="steel-grid">
 
-{% for project in projects %}
+{% for project in projects.active %}
+{{ card(title=project.title, description=project.description, actions=project.actions) }}
+{% endfor %}
+
+</div>
+
+## Deprecated
+
+<div class="steel-grid">
+
+{% for project in projects.inactive %}
 {{ card(title=project.title, description=project.description, actions=project.actions) }}
 {% endfor %}
 
