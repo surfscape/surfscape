@@ -10,6 +10,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { DateTime } from "luxon";
 import pluginIcons from 'eleventy-plugin-icons';
+import logToConsole from 'eleventy-plugin-console-plus'
 import filters from "./_config/filters.js";
 
 export default async function (eleventyConfig) {
@@ -34,6 +35,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("base", "base.njk");
   eleventyConfig.addLayoutAlias("page", "page.njk");
   eleventyConfig.addLayoutAlias("post", "post.njk");
+  eleventyConfig.addPlugin(logToConsole);
 
   /* filters */
   Object.keys(filters).forEach((filterName) => {
