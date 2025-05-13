@@ -13,18 +13,18 @@
             {% endif %}
         {% endfor %}
     </nav>
+    {% set subNav = collections.all | eleventyNavigation("News") %}
+    {% console collections.all | eleventyNavigation %}
     {% if eleventyNavigation.key or eleventyNavigation.parent %}
-        {% set subNav = collections.all | eleventyNavigation(eleventyNavigation.parent or eleventyNavigation.key) %}
         {% if subNav.length > 0 %}
             <nav class="steel-subnav">
-                <a class="steel-subnav__link" {%if not eleventyNavigation.parent %}href="" aria-current="page"{%else%}href="/{{ eleventyNavigation.parent | slugify }}"{%endif%} >Overview</a>
+                <a class="steel-subnav__link" {%if not eleventyNavigation.parent %}href="" aria-current="page"{%else%}href="/{{ eleventyNavigation.parent | slugify }}"{%endif%}>{{ navigation.subnav.label }}</a>
                 {% for item in subNav %}
                     {% if item.url == page.url %}
                         <a class="steel-subnav__link" href="" aria-current="page">{{item.title}}</a>
                     {% else %}
                         <a class="steel-subnav__link" href="{{ item.url }}">{{ item.title }}</a>
                     {% endif %}
-
                 {% endfor %}
             </nav>
         {% endif %}
