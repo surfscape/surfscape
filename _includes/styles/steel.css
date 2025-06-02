@@ -90,10 +90,8 @@ h6 {
 }
 
 .steel-button:hover {
-  --_btn-background-action: var(
-    --btn-background-action,
-    hsla(208, 100%, 80%, 0.2)
-  );
+  --_btn-background-action: var(--btn-background-action,
+      hsla(208, 100%, 80%, 0.2));
   --_btn-foreground-action: var(--btn-foreground-action, hsl(208, 100%, 85%));
   background: var(--_btn-background-action);
   color: var(--_btn-foreground-action);
@@ -126,13 +124,13 @@ h6 {
   border-radius: 0.35em;
 }
 
-.steel-card > h3 {
+.steel-card>h3 {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
 
-.steel-card > h3 img {
+.steel-card>h3 img {
   width: 48px;
   height: 48px;
   border: var(--steel-default-border);
@@ -152,7 +150,7 @@ h6 {
   border-style: dashed;
 }
 
-.steel-card--stub > h3 ~ div.steel-flex {
+.steel-card--stub>h3~div.steel-flex {
   gap: 0.5em 1em;
   justify-content: center;
 }
@@ -171,4 +169,11 @@ h6 {
   padding: 0 0.75rem;
   font-size: 0.85rem;
   background: var(--app-primary-container);
+}
+
+.steel-card--minimal {
+  padding: 0.5rem 1rem 0.5rem;
+  border-radius: 0;
+  border: none;
+  border-left: 0.25rem solid var(--app-border-color);
 }
