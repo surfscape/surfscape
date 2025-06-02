@@ -12,8 +12,8 @@
       </div>
     {% endif %}
     {% include "navigation.njk" %}
-    
-    <header class="page-header stack" {%if hero.backdrop %}style="background-image:url({{hero.backdrop}})"{%endif%}
+
+    <header class="page-header stack" {%if hero.backdrop %}style="background-image:url({{hero.backdrop}});background-size:cover;"{%endif%}
     >
       {% if hero.title %}
         {% set hero_title = hero.title | safe %}
@@ -29,6 +29,7 @@
                 height = "17" %}{%endif%}</a>
             {% endfor %}
           </div>
+          <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
         {% endif %}
       </header>
       <main>
