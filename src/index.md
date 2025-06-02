@@ -24,7 +24,7 @@ We are an umbrella focused on creating software and services that respect user f
 
 <div class="steel-grid">
 
-{{ card(title = "Celer", description = "The true toolbox for Windows", actions = [
+{{ card(title = "Celer", description = "The advanced toolbox for Windows", actions = [
     {label: "Learn More", url: "/projects/celer", type: "primary"},
     {label: "Celer on Tidepool", url: "https://surfscape.github.io/tidepool/projects/celer"}
 ]) }}

@@ -2,7 +2,7 @@ export default {
     active: [
         {
             title: "Celer",
-            description: "The true toolbox for Windows",
+            description: "The advanced toolbox for Windows",
             actions: [
                 {
                     label: "Learn More",
