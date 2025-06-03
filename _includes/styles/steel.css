@@ -15,7 +15,6 @@ h6 {
 }
 
 .steel-flex,
-.steel-nav,
 .steel-subnav {
   --_flex-gap: var(--flex-gap, 1rem);
   display: flex;
@@ -34,9 +33,10 @@ h6 {
 }
 
 .steel-nav {
-  --flex-gap: 0.5em;
+  display: flex;
+  gap: 0.5em;
   padding: 0.5em 0.25em;
-  justify-content: center;
+  overflow-x: auto;
   border-bottom: var(--steel-default-border);
 }
 
@@ -47,6 +47,7 @@ h6 {
   font-weight: 300;
   text-decoration: none;
   transition: 115ms all ease-in-out;
+
 }
 
 .steel-nav__link[aria-current] {
