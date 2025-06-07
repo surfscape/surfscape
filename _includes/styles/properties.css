@@ -18,4 +18,5 @@
 
   --steel-default-padding: 1.25rem;
   --steel-default-lineheight-padding: calc(2.25rem - var(--steel-line-height));
+  color-scheme: dark;
 }
