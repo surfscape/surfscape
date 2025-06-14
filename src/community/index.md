@@ -24,3 +24,5 @@ The goal is simple: to grow SurfScape with the people who believe in it. Whether
 </div>
 
 ## Getting Involved
+
+We currently have our official [Discord server](https://discord.gg/dY4GSudRxv) and [GitHub Discussions](https://github.com/orgs/surfscape/discussions) available, but we are gathering resources to have new ways of communication that are less restrict and more privacy respective.
