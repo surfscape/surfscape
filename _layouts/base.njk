@@ -31,6 +31,12 @@
           </div>
           <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
         {% endif %}
+        {% if date %}
+          <p>
+            Published in  <time datetime="{{date}}">{{date | formatPostDate}}</time>
+          </p>
+        {% endif %}
+
       </header>
       <main>
         {% block base %}
