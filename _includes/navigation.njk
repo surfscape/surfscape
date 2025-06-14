@@ -45,11 +45,14 @@
                 </a>
 
                 {% for subItem in subNavLinks %}
-                    <a class="steel-subnav__link" 
+                    {% if not subItem.data.pagination %}
+
+                        <a class="steel-subnav__link" 
                        href="{{ subItem.url | url }}"
                        {% if subItem.url == page.url %}aria-current="page"{% endif %}>
-                        {{ subItem.title or subItem.key }}
-                    </a>
+                            {{ subItem.title or subItem.key }}
+                        </a>
+                    {% endif %}
                 {% endfor %}
             </nav>
         {% endif %}
