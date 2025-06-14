@@ -167,7 +167,7 @@ h6 {
 .steel__label {
   border-radius: 2rem;
   color: var(--primary);
-  padding: 0 0.75rem;
+  padding: 0.15rem 0.75rem;
   font-size: 0.85rem;
   background: var(--app-primary-container);
 }
