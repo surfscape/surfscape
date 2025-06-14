@@ -1,0 +1,19 @@
+---
+permalink: "/news/tags/{{ tag | slugify }}/"
+pagination: 
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: "{{ tag }}"
+    description: "{{ tagDescriptions[tag] or 'Posts tagged with ' + tag }}"
+    eleventyNavigation:
+        parent: News
+        key: "{{ tag }}"
+---
+
+{% set taglist = collections[tag] | reverse %}
+{% for post in taglist %}
+    <a href="{{post.url}}">{{post.title}}</a>
+{% endfor %}
