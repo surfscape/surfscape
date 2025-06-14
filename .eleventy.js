@@ -42,6 +42,13 @@ export default async function (eleventyConfig) {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
+  /* collections */
+  eleventyConfig.addCollection("news", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/news/content/*.md").sort((a, b) => {
+      return b.date - a.date;
+    });
+  });
+
   /* custom date formats */
   eleventyConfig.addDateParsing(function (dateValue) {
     let localDate;
