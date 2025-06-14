@@ -1,6 +1,6 @@
 ---
 title: Community
-description: Explore the SurfScape community initiative
+description: Explore the SurfScape community initiative.
 hero:
   backdrop: "/public/community_hero_banner.png"
 collection: main

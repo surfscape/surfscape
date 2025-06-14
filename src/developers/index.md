@@ -1,6 +1,6 @@
 ---
 title: Developers
-description: The SurfScape developer portal, explore project documentation and product whitepapers
+description: The SurfScape developer portal, explore project documentation and product whitepapers.
 hero:
   actions:
     - label: Developer Documentation

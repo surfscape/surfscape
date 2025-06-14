@@ -1,6 +1,6 @@
 ---
 title: Projects
-description: Explore SurfScape projects, services, and other initiatives
+description: Explore SurfScape projects, services, and other initiatives.
 hero:
   backdrop: "/public/projects_hero_banner.png"
   actions:

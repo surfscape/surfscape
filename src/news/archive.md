@@ -1,6 +1,6 @@
 ---
 title: Archive
-description: Archived posts
+description: Archived posts.
 parent: News
 order: 4
 ---
