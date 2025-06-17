@@ -45,3 +45,13 @@ We are an umbrella focused on creating software and services that respect user f
 ]) }}
 
 </div>
+
+## Links & Friends
+
+<div class="steel-flex">
+
+{% for item in buttons %}
+<a href="{{item.url}}" aria-label="{{item.name}}" class="old-button"><img src="/public/buttons/{{item.img}}" alt="" aria-hidden="true" eleventy:ignore ></a>
+{% endfor %}
+
+</div>

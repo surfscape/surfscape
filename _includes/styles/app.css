@@ -43,6 +43,16 @@ html {
   padding: 1rem 0;
 }
 
-#app-footer > nav ~ p {
+#app-footer>nav~p {
   text-align: center;
+}
+
+.old-button {
+  display: block;
+  image-rendering: pixelated;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.old-button:hover {
+  opacity: 0.5;
 }
