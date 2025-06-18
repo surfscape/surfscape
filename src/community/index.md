@@ -7,19 +7,19 @@ collection: main
 order: 2
 ---
 
-Welcome to the SurfScape Community Initiative — a space where everyone can come together to support the project.
+Welcome to the SurfScape Community Initiative, a space where everyone can come together to support the project.
 
-The goal is simple: to grow SurfScape with the people who believe in it. Whether you're a developer, designer, tester, or just someone who enjoys our work, you're in the right place!
+The main goal is to grow SurfScape with those who believe in it, whether you are a developer, designer, tester, or just someone who enjoys our work and want to support and help us.
 
 ## Goals
 
 <div class="steel-grid">
 
-{{ card(title="Build a Welcoming Community", description="Foster an inclusive, respectful, and diverse space that encourages open collaboration between contributors, developers, and users but also easy and accessible to everyone.", type="minimal") }}
+{{ card(title="Create a Welcoming Community", description="Create an inclusive, respectful, and diverse space that encourages open collaboration among everyone, while remaining accessible to all.", type="minimal") }}
 
-{{ card(title="Open Contributions & Support ", description="Promote community-led development through open discussions and pull requests, support people that need help and encourage community-built extensions, themes, and forks.", type="minimal") }}
+{{ card(title="Open Contributions and Support ", description="Promote community-led development through open discussions and pull requests, help people in need, and promote community-built extensions, themes, and forks.", type="minimal") }}
 
-{{ card(title="Active Voice", description="Actively gather feedback from users and implement what matters most and allow community voting and/or input on features and ideas.", type="minimal") }}
+{{ card(title="Active Voice", description="Actively ask for user feedback and implement what is most important, while also allowing for community voting and/or input on features and ideas.", type="minimal") }}
 
 </div>
 
