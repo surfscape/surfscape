@@ -10,14 +10,16 @@ hero:
   footer: Free as in <i>libre</i> — no telemetry. Ever.
 ---
 
-## Features
+> In construction
 
-{{ card(title="Modern Architecture", description="Built with the latest tools", type="minimal") }}
+<!-- ## Features -->
+
+<!-- {{ card(title="Modern Architecture", description="Built with the latest tools", type="minimal") }} -->
 
 <!-- ## Screenshots -->
 
-## System Requirements
+<!-- ## System Requirements -->
 
-## Downloads
+<!-- ## Downloads -->
 
 <!-- ## Support -->
