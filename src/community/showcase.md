@@ -5,7 +5,7 @@ hero:
   backdrop: "/public/showcase_hero_banner.png"
   actions:
     - label: Submit your project!
-      link: "https://cryptpad.disroot.org/form/#/3/form/edit/d814e67a8c5c5ffd98a9aaaa065175c2/"
+      link: "https://cryptpad.disroot.org/form/#/2/form/view/RLUK-1-FpoWyMPjKxB+bmjKCO-2N8J81IlqHKRvofg0/"
       icon: lucide:file-pen
 parent: Community
 ---
