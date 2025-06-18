@@ -7,7 +7,7 @@
 }
 
 html {
-  font: 1.15rem / var(--steel-line-height) "Geist", system-ui,
+  font: 1.2rem / var(--steel-line-height) "Geist", system-ui,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   letter-spacing: -0.01em;
   scroll-behavior: smooth;
@@ -128,12 +128,6 @@ blockquote {
   background: var(--container);
   font-style: italic;
   border-left: 0.25em solid var(--primary);
-}
-
-em {
-  font-style: normal;
-  color: var(--app-background);
-  background: var(--primary);
 }
 
 main article>p {
