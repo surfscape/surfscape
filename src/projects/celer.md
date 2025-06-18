@@ -1,6 +1,6 @@
 ---
 title: Celer
-description: Take back control of your Windows system — ethically, efficiently, and without bloat.
+description: Take back control of your Windows system
 hero:
   backdrop: "/public/projects_hero_banner.png"
   actions:
@@ -10,20 +10,20 @@ hero:
   footer: Free as in <i>libre</i> — no telemetry. Ever.
 ---
 
-Celer is SurfScape’s flagship product — a powerful and privacy-first toolbox that unifies system monitoring, power tuning, memory tools, and cleanup features in one ethical package. Designed for Windows users of all levels, from casual users to IT professionals.
+Celer is SurfScape's flagship product, a powerful and privacy-conscious toolbox that combines system monitoring, power tuning, memory tools, and cleanup features in a single program. Designed for Windows users of all skill levels, from casual to IT professionals.
 
 ## Features
 
-Celer brings essential system tools together with a focus on clarity, ethics, and control. Here's what makes it different:
+Celer combines essential system tools with a focus on transparency, ethics, and control. Here's what differentiates it from the alternatives.
 
 <div class="steel-grid">
 
-{{ card(title="Real Time System Monitoring", description="Monitor your system in real time — including CPU, GPU, RAM, storage, battery, and thermal sensors.", type="minimal") }}
-{{ card(title="Advanced Power Management", description="Create and switch power plans, monitor battery wear, and optimize for performance or efficiency as needed.", type="minimal") }}
-{{ card(title="Memory Tools & Insights", description="Clean RAM cache, manage virtual memory, and detailed information about the system memory.", type="minimal") }}
-{{ card(title="Clean up", description="Clean temporary and redundant files from the system and apps — with zero tracking or data sharing.", type="minimal") }}
-{{ card(title="Lightweight Architecture", description="Built for speed and efficiency — no background services, no clutter.", type="minimal") }}
-{{ card(title="Ethical by Design", description="Designed around privacy, transparency, and user autonomy. No ads. No telemetry. Ever.", type="minimal") }}
+{{ card(title="Real Time System Monitoring", description="Monitor your system in real time, including CPU, GPU, RAM, storage, battery, and thermal sensors.", type="minimal") }}
+{{ card(title="Advanced Power Management", description="Create and switch power plans, monitor battery wear, and adjust performance or efficiency as needed.", type="minimal") }}
+{{ card(title="Memory Tools", description="Clean RAM cache, manage virtual memory, and get detailed information about the system memory.", type="minimal") }}
+{{ card(title="Clean Up", description="Remove temporary and redundant files from the system and third party apps.", type="minimal") }}
+{{ card(title="Lightweight Architecture", description="Built for speed and efficiency. No background tasks or services and auto startups.", type="minimal") }}
+{{ card(title="Ethical by Design", description="Designed with privacy, transparency, and user autonomy as base. No ads. No telemetry. Ever.", type="minimal") }}
 
 </div>
 
@@ -40,7 +40,6 @@ Celer brings essential system tools together with a focus on clarity, ethics, an
 
 ## Downloads
 
-No public releases/downloads are available at this time — development is ongoing.
-Check back soon for the first release.
+Celer is still in active development, so there are no public releases available. Join our [community](/community) to see if you can join our testing program.
 
 <!-- ## Support -->
