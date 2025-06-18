@@ -51,6 +51,10 @@ export default {
                     url: "https://github.com/customWin/",
                     type: "primary"
                 },
+                {
+                    label: "Discord",
+                    url: "https://discord.gg/MgY2hWURgK",
+                }
             ]
         },
         {
