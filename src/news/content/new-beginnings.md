@@ -11,13 +11,13 @@ If you don't know who we are then welcome to the SurfScape project! We are a col
 
 This is our new website, much more polished than any other version we've released, and it will stay that way. No more unnecessary redesigns am I right?
 
-Now, there are lot's of stuff to talk about, from project restructuring, a new face on team, and we are doing and will be doing in the near future. This will be (hopefully) answered in this post so let's get to it!
+Now, there are lot's of stuff to talk about, from project restructuring, a new face on the team, and what we are doing and will be doing in the near future. This will all be (hopefully) answered in this post, so let's get to it!
 
 ## Restructuring
 
-Firstly there has been a lot of changes in the backend, from new upcoming project to the deprecation of others, to a slightly branding redesign and new eyes on the project.
+Firstly there has been a lot of changes in the backend, from new upcoming projects and the deprecation of others, to a slightly branding redesign.
 
-We've decided to deprecate most of the old SurfScape projects, these include:
+First off, we've decided to deprecate most of our old projects, these include:
 
 - GameVortex
 - SurfKit
@@ -25,7 +25,7 @@ We've decided to deprecate most of the old SurfScape projects, these include:
 
 Now most of these will come back in a different form but since we have new and more important work to do, the best way was to just archive these and move on.
 
-For the new branding there is not a lot to talk about, we've gone back to the 2024 logo that features the complete _flower_, however the colors have changed and the logo is finally symmetrical! The new branding also feature a color scheme for light themes.
+For the new branding, there is not a lot to talk about, we've gone back to the 2024 logo that features the complete _flower_, however the colors have changed and the logo is finally symmetrical! The new branding also feature a color scheme for dark themes.
 
 ## New Projects
 
@@ -43,7 +43,7 @@ The current goal is to fix open issues and then port most of the suite to the ne
 
 ## New Member
 
-Yes, SurfScape is not a one-person project anymore! I've started SurfScape with a different name back in 2022 as a service provider for the Neocities community, now in 2025 we've expanded. My best friend [Fl1x1n](https://github.com/Fl1x1n/) decided to join the project and with that brought [Nuage](http://localhost:8080/projects/nuage/) to SurfScape's portfolio. I'm hoping that in a near future more people can come in into the project and grow their ideas with the us. Until then welcome the new member!
+Yes, SurfScape is not a one-person project anymore! I've started SurfScape with a different name back in 2022 as a service provider for the Neocities community, now in 2025 we've expanded. My best friend [Fl1x1n](https://github.com/Fl1x1n/) decided to join the project and with that brought [Nuage](http://localhost:8080/projects/nuage/) to SurfScape's portfolio. I'm hoping that in a near future more people can come in into the project and grow their ideas with us. Until then, welcome the new member!
 
 ## Expansion and Close-up
 
