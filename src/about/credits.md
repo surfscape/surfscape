@@ -2,6 +2,7 @@
 title: Credits
 description: Everything we used to make this website possible
 parent: About
+order: 4
 ---
 
 ## Support
