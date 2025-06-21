@@ -30,4 +30,7 @@
     <style>
         {% getBundle "css", "base" %}
     </style>
+    {% if env.environment == "production" %}
+        <script src="https://tinylytics.app/embed/v4bJWUZVVq46ZuF2rLkY.js" defer></script>
+    {% endif %}
 </head>
