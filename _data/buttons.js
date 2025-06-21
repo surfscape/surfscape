@@ -5,9 +5,14 @@ export default [
         img: "openbooks.gif"
     },
     {
+        name: "Last Rose Of Summer",
+        url: "https://lastroseofsummer.neocities.org",
+        img: "lrs.gif"
+    },
+    {
         name: "Flixin",
         url: "https://flixin.neocities.org",
-        img: "lrs.gif"
+        img: "flixin.gif"
     },
     {
         name: "ReduxFlakes",
