@@ -178,3 +178,9 @@ h6 {
   border: none;
   border-left: 0.25rem solid var(--app-border-color);
 }
+
+/* fixes for SVG icons*/
+
+.icon-github {
+  fill: currentColor;
+}
