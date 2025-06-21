@@ -2,12 +2,13 @@
 title: Team
 description: The people running SurfScape
 parent: About
+order: 2
 ---
 
 <div class="steel-grid">
 
 {%- for person in team -%}
-  {{ card(
+{{ card(
     title = person.name,
     title_image = person.title_image,
     list = person.list,
