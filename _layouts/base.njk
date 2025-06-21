@@ -19,7 +19,9 @@
         {% set hero_title = hero.title | safe %}
       {% endif %}
       <h1>{{ hero_title or title or meta.title}}</h1>
-      <p class="steel-subtitle">{{hero.description or description or meta.description}}</p>
+      {% if description != false %}
+        <p class="steel-subtitle">{{hero.description or description or meta.description}}</p>
+      {% endif %}
       {% if hero.actions %}
         <div class="steel-actions steel-flex">
           {% for item in hero.actions %}
@@ -34,6 +36,11 @@
         {% if date %}
           <p>
             Published in  <time datetime="{{date}}">{{date | formatPostDate}}</time>
+          </p>
+        {% endif %}
+        {% if modified %}
+          <p>
+            Modified in  <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
           </p>
         {% endif %}
 
