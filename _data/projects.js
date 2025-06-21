@@ -15,15 +15,19 @@ export default {
                 }
             ]
         },
-
         {
-            title: "Collectio",
-            description: "Offline web app to save and organize links with tags and collections",
+            title: "customWin",
+            description: "Home of the customIcons, driveIconPatcher, and more Windows patching tools!",
             actions: [
                 {
-                    label: "Collectio on Tidepool",
-                    url: "/projects/collectio",
+                    label: "Learn More",
+                    url: "/projects/customwin",
                     type: "primary"
+                },
+                {
+                    label: "customWin on GitHub",
+                    url: "https://github.com/customWin/",
+
                 },
             ]
         },
@@ -43,18 +47,14 @@ export default {
             ]
         },
         {
-            title: "customWin",
-            description: "Home of the customIcons, driveIconPatcher, and more Windows patching tools!",
+            title: "Collectio",
+            description: "Offline web app to save and organize links with tags and collections",
             actions: [
                 {
-                    label: "customWin on GitHub",
-                    url: "https://github.com/customWin/",
+                    label: "Collectio on Tidepool",
+                    url: "/projects/collectio",
                     type: "primary"
                 },
-                {
-                    label: "Discord",
-                    url: "https://discord.gg/MgY2hWURgK",
-                }
             ]
         },
         {
