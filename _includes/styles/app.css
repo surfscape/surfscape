@@ -17,6 +17,7 @@ html {
   padding-top: 1rem;
 }
 
+
 #app-header .header__title {
   display: block;
   margin: 0 auto;
@@ -36,6 +37,11 @@ html {
 .page-header h1,
 .page-header .steel-subtitle {
   max-width: 54ch;
+}
+
+/* fix spacing inconsistencies caused by text line hright for the button container */
+.page-header .steel-actions {
+  --spacer: 1em;
 }
 
 #app-footer {
