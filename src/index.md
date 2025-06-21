@@ -48,10 +48,10 @@ We are an umbrella focused on creating software and services that respect user f
 
 ## Links & Friends
 
-<div class="steel-flex">
+<div class="steel-flex" style="--flex-gap:0.5em">
 
 {% for item in buttons %}
-<a href="{{item.url}}" aria-label="{{item.name}}" class="old-button"><img src="/public/buttons/{{item.img}}" alt="" aria-hidden="true" eleventy:ignore ></a>
+<a href="{{item.url}}" aria-label="{{item.name}}" title="{{item.name}}" class="old-button"><img src="/public/buttons/{{item.img}}" alt="" aria-hidden="true" eleventy:ignore ></a>
 {% endfor %}
 
 </div>
