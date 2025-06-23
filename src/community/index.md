@@ -3,6 +3,10 @@ title: Community
 description: Explore the SurfScape community initiative.
 hero:
   backdrop: "/public/community_hero_banner.png"
+  actions:
+    - label: Join the Discord
+      link: "https://discord.gg/dY4GSudRxv"
+      icon: simple:discord
 collection: main
 order: 2
 ---
