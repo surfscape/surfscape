@@ -40,6 +40,15 @@ Celer combines essential system tools with a focus on transparency, ethics, and 
 
 ## Downloads
 
-Celer is still in active development, so there are no public releases available. Join our [community](/community) to see if you can join our testing program.
+> Celer is still in active development so be aware that the versions below may contain bugs and can cause data loss and other issues.
+
+### Orion beta branch
+
+<details>
+<summary>Version 1.0.0-beta.1</summary>
+<a href="https://github.com/surfscape/celer/releases/download/v1.0.0-beta.1/setup_debug.exe" download>x64 Portuguese - setup_debug.exe</a>
+</details>
+
+Join our [community](/community) for feedback and support.
 
 <!-- ## Support -->
