@@ -7,6 +7,9 @@ hero:
     - label: Downloads
       link: "#downloads"
       icon: lucide:chevron-down
+    - label: Source Code
+      link: "https://github.com/surfscape/celer"
+      icon: simple:github
   footer: Free as in <i>libre</i> — no telemetry. Ever.
 ---
 
