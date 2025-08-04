@@ -10,6 +10,7 @@ hero:
     - label: Source Code
       link: "https://github.com/surfscape/celer"
       icon: simple:github
+      type: minimal
   footer: Free as in <i>libre</i> — no telemetry. Ever.
 ---
 
