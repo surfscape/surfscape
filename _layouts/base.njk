@@ -31,6 +31,9 @@
                 height = "17" %}{%endif%}</a>
             {% endfor %}
           </div>
+        {% endif %}
+        {% if hero.footer %}
+
           <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
         {% endif %}
         {% if date %}

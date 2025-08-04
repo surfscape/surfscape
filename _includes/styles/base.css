@@ -120,7 +120,7 @@ main {
 
 hr {
   border: none;
-  border-top: 1px solid var(--stroke);
+  border-top: var(--steel-default-border);
 }
 
 blockquote {
@@ -141,4 +141,31 @@ main article>p {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+table {
+  font: inherit;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+td,
+th {
+  border: var(--steel-default-border);
+  text-align: left;
+  padding: 0.35em;
+
+}
+
+
+.steel-table {
+  overflow-x: auto;
+}
+
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 0.5em 0;
 }
