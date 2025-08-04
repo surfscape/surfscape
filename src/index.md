@@ -20,6 +20,22 @@ order: 0
 
 We are an umbrella focused on creating software and services that respect user freedom, privacy, and promote ethical development practices.
 
+## Latest News
+
+{% for post in collections.news %}
+{% if loop.first %}
+
+<section class="stack steel-card">
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p class="steel-subtitle">{{post.data.description}}</p>
+      <div class="steel-flex" style="margin-top: 0.4em;align-items:center;">
+      <p><small><time datetime="{{post.date}}">{{post.date | formatPostDate}}</time> </small></p>
+      </div>
+</section>
+
+{% endif %}
+{% endfor %}
+
 ## Projects
 
 <div class="steel-grid">
