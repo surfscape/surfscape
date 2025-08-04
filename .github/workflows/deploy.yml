@@ -49,5 +49,6 @@ jobs:
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
-          nekoweb-folder: "site"
+          nekoweb-domain: 'surfscape.nekoweb.org'
+          nekoweb-username: 'surfscape'
           directory: "_site"
