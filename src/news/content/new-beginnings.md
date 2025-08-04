@@ -1,6 +1,6 @@
 ---
 title: New Beginnings
-description: The new face of SurfScape and what's coming next
+description: The new face of SurfScape and what's coming next.
 tags: ["Press Releases", "Announcements"]
 date: 2025-06-17 21:54:57
 ---
