@@ -1,6 +1,6 @@
 {
   "name": "worker-name",
   "assets": {
-    "directory": "./dist/client/"
+    "directory": "./site/"
   }
 }
