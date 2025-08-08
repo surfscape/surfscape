@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@cloudflare/kv-asset-handler':
+        specifier: ^0.4.0
+        version: 0.4.0
       eleventy-plugin-console-plus:
         specifier: ^0.1.1
         version: 0.1.1
@@ -127,6 +130,10 @@ packages:
 
   '@11ty/recursive-copy@3.0.1':
     resolution: {integrity: sha512-suoSv7CanyKXIwwtLlzP43n3Mm3MTR7UzaLgnG+JP9wAdg4uCIUJiAhhgs/nkwtkvsuqfrGWrUiaG1K9mEoiPg==}
+
+  '@cloudflare/kv-asset-handler@0.4.0':
+    resolution: {integrity: sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA==}
+    engines: {node: '>=18.0.0'}
 
   '@emnapi/runtime@1.4.5':
     resolution: {integrity: sha512-++LApOtY0pEEz1zrd9vy1/zXVaVJJ/EbAF3u0fXIzPJEDtnITsBGbbK0EkM72amhl/R5b+5xx0Y/QhcVOpuulg==}
@@ -1659,6 +1666,10 @@ snapshots:
       promise: 7.3.1
       rimraf: 5.0.10
       slash: 1.0.0
+
+  '@cloudflare/kv-asset-handler@0.4.0':
+    dependencies:
+      mime: 3.0.0
 
   '@emnapi/runtime@1.4.5':
     dependencies:

@@ -1,0 +1,6 @@
+name = "surfscape"
+main = "worker.js"
+compatibility_date = "2025-08-08"
+
+[site]
+bucket = "_site/"
