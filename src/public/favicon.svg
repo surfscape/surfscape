@@ -1,0 +1,25 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="128" cy="40.4706" rx="15.0588" ry="40.4706" fill="#262626"/>
+<ellipse cx="215.529" cy="126.118" rx="15.0588" ry="40.4706" transform="rotate(90 215.529 126.118)" fill="#262626"/>
+<ellipse cx="128" cy="215.529" rx="15.0588" ry="40.4706" transform="rotate(180 128 215.529)" fill="#262626"/>
+<ellipse cx="40.4706" cy="128" rx="15.0588" ry="40.4706" transform="rotate(-90 40.4706 128)" fill="#262626"/>
+<ellipse cx="57.1475" cy="57.1475" rx="15.0588" ry="40.4706" transform="rotate(-45 57.1475 57.1475)" fill="#262626"/>
+<ellipse cx="199.265" cy="57.1475" rx="15.0588" ry="40.4706" transform="rotate(45 199.265 57.1475)" fill="#262626"/>
+<ellipse cx="199.265" cy="199.265" rx="15.0588" ry="40.4706" transform="rotate(-45 199.265 199.265)" fill="#262626"/>
+<ellipse cx="57.1476" cy="199.265" rx="15.0588" ry="40.4706" transform="rotate(45 57.1476 199.265)" fill="#262626"/>
+<rect x="96.0554" y="128" width="45.1765" height="45.1765" rx="12" transform="rotate(-45 96.0554 128)" fill="#0C8DFF"/>
+<style>
+@media (prefers-color-scheme: dark) {
+ellipse {
+    fill: #eee;
+}
+rect {
+fill: hsl(208, 100%, 80%);
+}
+}
+
+
+
+
+</style>
+</svg>
