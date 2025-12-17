@@ -11,6 +11,11 @@ order: 3
 
 <div class="steel-grid">
 
+{{ card(title="Software that Respects", description="Early-stage collective that aims to bring together projects, maintainers, moderators, and a community that gather and collaborate to make software that respects.", actions = [
+    {label: "Official Website", url: "https://str.gay/", type: "primary"},
+    {label: "Discord", url: "https://discord.gg/4XFeyyjbbw"}
+]) }}
+
 {{ card(title="32-Bit Cafe", description="A welcoming community for website hobbyists and people who are passionate about the indie/personal web.", actions = [
     {label: "Official Website", url: "https://32bit.cafe/", type: "primary"},
     {label: "Discourse", url: "https://discourse.32bit.cafe/"}
