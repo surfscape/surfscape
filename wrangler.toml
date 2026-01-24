@@ -1,6 +1,3 @@
 name = "surfscape"
 pages_build_output_dir = "./site"
 compatibility_date = "2025-08-08"
-
-[site]
-bucket = "_site/"
