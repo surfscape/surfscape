@@ -1,7 +1,5 @@
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
-import markdownItFootnote from "markdown-it-footnote";
-import markdownItAttrs from "markdown-it-attrs";
 import postcss from "postcss/lib/postcss";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
@@ -10,7 +8,8 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { DateTime } from "luxon";
 import pluginIcons from 'eleventy-plugin-icons';
-import logToConsole from 'eleventy-plugin-console-plus'
+import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
+
 import filters from "./_config/filters.js";
 
 export default async function (eleventyConfig) {
@@ -18,6 +17,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["avif", "webp", "png"],
+    widths: ["auto"],
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",
@@ -29,13 +30,13 @@ export default async function (eleventyConfig) {
     sources: [{ name: 'lucide', path: 'node_modules/lucide-static/icons' },
     { name: 'simple', path: 'node_modules/simple-icons/icons' }],
   })
+  eleventyConfig.addPlugin(eleventyLucideicons);
 
   eleventyConfig.addPassthroughCopy("src/public");
   /* layout aliases */
   eleventyConfig.addLayoutAlias("base", "base.njk");
   eleventyConfig.addLayoutAlias("page", "page.njk");
   eleventyConfig.addLayoutAlias("post", "post.njk");
-  eleventyConfig.addPlugin(logToConsole);
 
   /* filters */
   Object.keys(filters).forEach((filterName) => {
@@ -47,6 +48,17 @@ export default async function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/news/content/*.md").sort((a, b) => {
       return b.date - a.date;
     });
+  });
+
+  /* shortcodes */
+  eleventyConfig.addShortcode("postCard", function (post) {
+    return `
+    <section class="card stack">
+        <h3><a href="${post.url}">${post.data.title}</a></h3>
+        <p class="steel-subtitle">${post.data.description}</p>
+          <p style="margin-top: 0.4em;"><small><time datetime="${post.date}">${filters.formatPostDate(post.date)}</time></small></p>
+    </section>
+    `;
   });
 
   /* custom date formats */
@@ -66,10 +78,6 @@ export default async function (eleventyConfig) {
   });
   /* plugins */
   const md = markdownIt({ html: true });
-  md.use(markdownItAttrs, {
-    leftDelimiter: "[-",
-    rightDelimiter: "-]",
-  });
   md.use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
       placement: "after",
@@ -80,12 +88,11 @@ export default async function (eleventyConfig) {
     level: [1, 2, 3, 4],
     slugify: eleventyConfig.getFilter("slugify"),
   });
-  md.use(markdownItFootnote);
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPreprocessor("macro-inject", "njk,md", (data, content) => {
     return (
-      `{%- from "components/card.njk" import card -%}\n` +
+      `{%- from "components/card.njk" import card, linkCard -%}\n{%- from "components/imageShowcase.njk" import imageShowcase -%}\n` +
       content
     );
   });

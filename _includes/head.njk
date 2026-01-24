@@ -31,7 +31,15 @@
     <style>
         {% getBundle "css", "base" %}
     </style>
+    {% css "glightbox" %}
+    {% include "styles/lib/glightbox.min.css" %}
+    {% endcss %}
+    <link rel="stylesheet" href="{% getBundleFileUrl "css", "app" %}">
+    {% if modules.glightbox %}
+        <link rel="stylesheet" href="{% getBundleFileUrl "css", "glightbox" %}">
+    {% endif %}
     {% if env.environment == "production" %}
         <script src="https://tinylytics.app/embed/v4bJWUZVVq46ZuF2rLkY.js" defer></script>
     {% endif %}
+
 </head>

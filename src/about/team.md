@@ -5,7 +5,7 @@ parent: About
 order: 2
 ---
 
-<div class="steel-grid">
+<div class="auto-grid">
 
 {%- for person in team -%}
 {{ card(

@@ -18,7 +18,7 @@ By supporting SurfScape you are:
 
 ## Financial Support
 
-At the moment we do not have a way for anyone to support financially. Come back later!
+Check the [donate page](/donate).
 
 ## Contribute
 

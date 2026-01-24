@@ -1,29 +1,21 @@
 ---
 title: Projects
 description: Explore SurfScape projects, services, and other initiatives.
-hero:
-  backdrop: "/public/projects_hero_banner.png"
-  actions:
-    - label: Projects on Tidepool
-      link: "https://surfscape.github.io/tidepool/projects/overview"
-      icon: lucide:shapes
 collection: main
-order: 1
+order: 0
 ---
 
-## Active
-
-<div class="steel-grid">
+<div class="auto-grid">
 
 {% for project in projects.active %}
-{{ card(title=project.title, description=project.description, actions=project.actions) }}
+{{ linkCard(title=project.title, description=project.description, url=project.url,title_image=project.image ) }}
 {% endfor %}
 
 </div>
 
-## Deprecated
+## Archived
 
-<div class="steel-grid">
+<div class="auto-grid">
 
 {% for project in projects.inactive %}
 {{ card(title=project.title, description=project.description, actions=project.actions) }}

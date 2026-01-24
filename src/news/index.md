@@ -5,10 +5,11 @@ navigation:
   subnav:
     label: Latest News
 collection: main
-order: 4
+order: 3
 ---
 
 {% for post in collections.news %}
+{% if post.data.archived == false or not post.data.archived %}
 
 <section class="stack">
       <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
@@ -24,4 +25,5 @@ order: 4
       {%- endif -%}
       </div>
 </section>
+{% endif %}
 {% endfor %}

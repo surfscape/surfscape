@@ -1,7 +1,9 @@
 {% extends "./base.njk" %}
 
-{% block base %}
-    <article id="main-content" class="stack">
-        {{ content | safe }}
-    </article>
-{%endblock base%}
+{% block main %}
+    <main>
+        <article id="main-content" class="stack">
+            {{ content | safe }}
+        </article>
+    </main>
+{%endblock main%}

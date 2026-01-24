@@ -1,0 +1,32 @@
+<header class="page-header stack">
+    {% if hero.title %}
+        {% set hero_title = hero.title | safe %}
+    {% endif %}
+    <h1>{{ hero_title or title or meta.title}}</h1>
+    {% if description != false %}
+        <p class="subtitle">{{hero.description or description or meta.description}}</p>
+    {% endif %}
+    {% if hero.actions %}
+        <div class="header-actions">
+            {% for item in hero.actions %}
+                <a href="{{item.link}}" class="button {% if not item.type -%}button--primary{% else -%}steel-button--{{item.type}}{%- endif -%}">{{item.label}}
+                    {%if item.icon %}{% icon item.icon,
+                        width = "17",
+                        height = "17" %}{%endif%}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if hero.footer %}
+            <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
+        {% endif %}
+        {% if date %}
+            <p>
+            Published in  <time datetime="{{date}}">{{date | formatPostDate}}</time>
+            </p>
+        {% endif %}
+        {% if modified %}
+            <p>
+            Modified in  <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+            </p>
+        {% endif %}
+    </header>

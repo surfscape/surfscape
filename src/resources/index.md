@@ -4,12 +4,12 @@ description: Library of resources about the web and privacy made by us and other
 hero:
   backdrop: "/public/showcase_hero_banner.png"
 collection: main
-order: 3
+order: 2
 ---
 
 ## External
 
-<div class="steel-grid">
+<div class="auto-grid">
 
 {{ card(title="Software that Respects", description="Early-stage collective that aims to bring together projects, maintainers, moderators, and a community that gather and collaborate to make software that respects.", actions = [
     {label: "Official Website", url: "https://str.gay/", type: "primary"},

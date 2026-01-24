@@ -1,11 +1,14 @@
-<footer id="app-footer">
-    <nav></nav>
-    <p>&copy; 2022 - 2025 <a href="/about/team">SurfScape Team</a> and <a href="https://github.com/surfscape/surfscape/graphs/contributors">contributors</a>.</p>
-    <p>
-        <a href="https://github.com/surfscape/surfscape">Source Code (GitHub)</a> - <a href="/privacy">Privacy Policy</a> - 
+<footer class="main-footer">
+    <section>
+        <p>&copy; 2022 - 2026 <a href="/about/team">SurfScape Team</a> and <a href="https://github.com/surfscape/surfscape/graphs/contributors">contributors</a>.</p>
+        <a href="/privacy">Privacy Policy</a>
+        <p>Made in Portugal ❤</p>
+    </section>
+    <nav>
         {% for item in meta.socials -%}
-            <a href="{{item.url}}" rel="me">{{item.name}}</a>
+            <a href="{{item.url}}" rel="me">
+                {% icon item.icon %}
+                {{item.name}}</a>
         {%- endfor -%}
-    </p>
-    <p>Made in Portugal ❤</p>
+    </nav>
 </footer>

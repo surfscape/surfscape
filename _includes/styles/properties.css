@@ -1,20 +1,20 @@
 :root {
-  --max-viewport: 1024px;
-  --primary: hsl(208, 100%, 80%);
-  --on-primary: hsl(206, 32%, 15%);
-  --app-background: hsl(206, 2%, 10%);
-  --app-container: hsl(0, 0%, 24%);
-  --app-foreground: hsl(0, 0%, 96%);
-  --app-border-color: hsl(208, 5%, 25%);
+  --max-viewport: 720px;
+  --background: hsl(0, 0%, 6%);
+  --container: hsla(0, 0%, 20%, 0.25);
+  --container-state: hsla(0, 0%, 20%, 0.5);
+  --stroke: hsl(0, 0%, 18%);
+  --primary: #99CFFF;
+  --accent: hsl(208, 56%, 67%);
+  --accent-foreground: hsl(208, 44%, 21%);
+  --foreground: hsl(255, 0%, 65%);
+  --foreground-primary: hsl(255, 0%, 90%);
 
-  --app-primary-container: #132839;
+  --steel-line-height: 1.4rem;
 
-  --steel-text-default: hsl(0, 0%, 85%);
-  --steel-line-height: 1.5rem;
-
-  --steel-desktop-border: 1px solid var(--app-border-color);
-  --steel-default-border: 1px solid var(--app-border-color);
-  --steel-mobile-border: 1px solid var(--app-border-color);
+  --steel-desktop-border: 1px solid var(--stroke);
+  --steel-default-border: 1px solid var(--stroke);
+  --steel-mobile-border: 1px solid var(--stroke);
 
   --steel-default-padding: 1.25rem;
   --steel-default-lineheight-padding: calc(2.25rem - var(--steel-line-height));

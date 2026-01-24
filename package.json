@@ -33,15 +33,13 @@
     "luxon": "^3.7.1",
     "markdown-it": "14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "markdown-it-attrs": "^4.3.1",
-    "markdown-it-footnote": "^4.0.0",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "postcss-load-config": "^6.0.1"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.4.0",
-    "eleventy-plugin-console-plus": "^0.1.1",
+    "@grimlink/eleventy-plugin-lucide-icons": "^2.1.10",
     "eleventy-plugin-icons": "^4.5.3",
     "lucide-static": "^0.509.0",
     "simple-icons": "^14.15.0"

@@ -3,6 +3,7 @@ title: July 2025 Devlog
 description: Recap of the work done throughout July on the Celer and customIcons projects.
 tags: ["Devlog", "Celer", "customWin", "customIcons"]
 date: 2025-08-04 01:31:00
+archived: true
 ---
 
 **Welcome to our first devlog!**

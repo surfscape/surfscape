@@ -6,17 +6,24 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Geist";
+  src: url("/public/geist.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 html {
-  font: 1.2rem / var(--steel-line-height) "Geist", system-ui,
+  font: 1.10rem / var(--steel-line-height) "Geist", system-ui,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
   scroll-behavior: smooth;
   text-size-adjust: none;
 }
 
 :focus {
   outline-offset: 2px;
-  outline: 2px solid rgb(153, 195, 255);
+  outline: 2px solid rgb(255, 255, 255);
 }
 
 ul[role="list"],
@@ -36,6 +43,7 @@ picture,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
   font-style: italic;
 }
 
@@ -56,14 +64,28 @@ summary {
 }
 
 ::selection {
-  color: hsl(193, 50%, 21%);
-  background: hsla(193, 95%, 60%, 0.75);
+  color: hsl(208, 50%, 18%);
+  background: hsla(208, 80%, 78%, 0.75);
 }
 
 a {
   color: var(--primary);
   text-decoration: underline 1px;
   text-underline-offset: 0.15em;
+  transition: 160ms all cubic-bezier(0.07, 0.2, 0.33, 0.84);
+}
+
+a:has(.icon),
+h2:has(.icon),
+h3:has(.icon) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+a .icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 a:hover {
@@ -79,7 +101,7 @@ h6 {
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2em;
-  color: var(--app-foreground);
+  color: var(--foreground-primary);
 }
 
 .anchor {
@@ -98,7 +120,14 @@ h3:hover>.anchor {
 .acs-skip {
   position: absolute;
   top: -100px;
-  background: var(--container);
+  left: -100px;
+  display: block;
+  z-index: 100;
+  color: white;
+  zoom: 1.1;
+  outline-color: red;
+  background: black;
+  transition: none;
 }
 
 .acs-skip:focus,
@@ -126,22 +155,9 @@ hr {
 blockquote {
   padding: 0.5rem 1rem;
   background: var(--container);
-  font-style: italic;
-  border-left: 0.25em solid var(--primary);
+  border-left: 0.25em solid var(--stroke);
 }
 
-main article>p {
-  text-indent: 1rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 table {
   font: inherit;
@@ -155,9 +171,7 @@ th {
   border: var(--steel-default-border);
   text-align: left;
   padding: 0.35em;
-
 }
-
 
 .steel-table {
   overflow-x: auto;
@@ -168,4 +182,13 @@ figure figcaption {
   font-style: italic;
   font-size: 0.9em;
   margin: 0.5em 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

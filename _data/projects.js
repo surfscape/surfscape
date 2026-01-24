@@ -3,71 +3,24 @@ export default {
         {
             title: "Celer",
             description: "The advanced toolbox for Windows",
-            actions: [
-                {
-                    label: "Learn More",
-                    url: "/projects/celer",
-                    type: "primary"
-                },
-                {
-                    label: "Celer on Tidepool",
-                    url: "https://surfscape.github.io/tidepool/projects/celer",
-                }
-            ]
+            url: "/celer",
+            image: {
+                src: "/public/celer.png",
+                alt: ""
+            },
         },
         {
             title: "customWin",
             description: "Home of the customIcons, driveIconPatcher, and more Windows patching tools!",
-            actions: [
-                {
-                    label: "Learn More",
-                    url: "/projects/customwin",
-                    type: "primary"
-                },
-                {
-                    label: "customWin on GitHub",
-                    url: "https://github.com/customWin/",
+            url: "/projects/customwin",
 
-                },
-            ]
         },
         {
             title: "Nuage",
             description: "The weather app for minimalists",
-            actions: [
-                {
-                    label: "Learn More",
-                    url: "/projects/nuage",
-                    type: "primary"
-                },
-                {
-                    label: "Nuage on Tidepool",
-                    url: "https://surfscape.github.io/tidepool/projects/nuage",
-                }
-            ]
+            url: "/projects/nuage",
         },
-        {
-            title: "Collectio",
-            description: "Offline web app to save and organize links with tags and collections",
-            actions: [
-                {
-                    label: "Collectio on Tidepool",
-                    url: "/projects/collectio",
-                    type: "primary"
-                },
-            ]
-        },
-        {
-            title: "GameVortex",
-            description: "The Flash (and other engines) gaming web portal",
-            actions: [
-                {
-                    label: "GameVortex on Tidepool",
-                    url: "https://surfscape.github.io/tidepool/projects/gaming/",
-                    type: "primary"
-                },
-            ]
-        }
+
     ],
     inactive: [
         {

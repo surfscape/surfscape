@@ -3,6 +3,7 @@ title: New Beginnings
 description: The new face of SurfScape and what's coming next.
 tags: ["Press Releases", "Announcements"]
 date: 2025-06-17 21:54:57
+archived: true
 ---
 
 History repeats itself and SurfScape is back, once again! Yeah I know, it's probably the 10th time I say SurfScape is back but I'm hoping this is the time that we do something useful for once (no promises though).

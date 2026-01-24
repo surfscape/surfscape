@@ -1,10 +1,32 @@
-{% macro card(stub = false, type = '', icon = '', title = '', list = false, description = '', labels = false, actions = false, title_image = {}) %}
-  {%- if stub != true -%}
-    <section class="steel-card stack {% if type %}steel-card--{{type}}{%endif%}">
+{%- macro card(stub = false, type = '', icon = '', title = '', url = '', list = false, description = '', labels = false, actions = false, title_image = {}) -%}
+  <section class="card stack {% if type -%}card--{{type}}{%-endif-%}">
+    {{ cardContent(icon = icon, title = title, list = list, description = description, labels = labels, actions = actions, title_image = title_image) }}
+  </section>
+{%- endmacro -%}
+
+{%- macro linkCard(icon = '', title = '',  description = '', url = '', title_image = {}) -%}
+  <a href="{{url}}" class="card">
+    {% if title_image.src -%}
+      <img src="{{ title_image.src }}" alt="{{ title_image.alt }}" eleventy:ignore/>
+    {%- elif icon -%}
+      {%- lucide icon -%}
+    {%- endif -%}
+    <section class="card-content stack">
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
+    </section>
+  </a>
+{%- endmacro -%}
+
+{%- macro cardContent(icon = '', title = '', list = false, description = '', labels = false, actions = false, title_image = {})-%}
+  {%- if title_image.src -%}
+    <img src="{{ title_image.src }}" alt="{{ title_image.alt }}" eleventy:ignore>
+  {%- elif icon -%}
+    {%- lucide icon -%}
+  {%- endif -%}
+  {%- if title_image or icon -%}
+    <section class="card-content">
       <h3>
-        {%- if title_image.src %}
-          <img src="{{ title_image.src }}" alt="{{ title_image.alt }}">
-        {%- endif -%}
         {{ title }}</h3>
       {%- if list -%}
         <ul>
@@ -16,16 +38,16 @@
         <p>{{ description }}</p>
       {%- endif -%}
       {%- if labels -%}
-        <div class="steel-flex steel-card-label-group">
+        <div class="steel-flex">
           {%- for label in labels -%}
             <span class="steel__label">{{ label }}</span>
           {%- endfor -%}
         </div>
       {%- endif -%}
-      {%- if actions -%}
-        <div class="steel-flex steel-card-button-group">
+      {%- if actions %}
+        <div class="card-actions">
           {%- for item in actions -%}
-            <a class="steel-button steel-button--{{ item.type }}" href="{{ item.url }}">
+            <a class="button button--{{ item.type }}" href="{{ item.url }}">
               {{ item.label }}
             </a>
           {%- endfor -%}
@@ -33,15 +55,33 @@
       {%- endif -%}
     </section>
   {%- else -%}
-    <section class="steel-card steel-card--stub stack">
-      <h3>{{ title }}</h3>
-      <div class="steel-flex">
+    <h3>
+      {{ title }}</h3>
+    {%- if list -%}
+      <ul>
+        {%- for item in list -%}
+          <li>{{ item }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <p>{{ description }}</p>
+    {%- endif -%}
+    {%- if labels -%}
+      <div class="card-labels">
+        {%- for label in labels -%}
+          <span class="steel__label">{{ label }}</span>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if actions %}
+      <div class="card-actions">
         {%- for item in actions -%}
-          <a href="{{ item.url }}">
+          <a class="button button--{{ item.type }}" href="{{ item.url }}">
             {{ item.label }}
           </a>
         {%- endfor -%}
       </div>
-    </section>
-  {% endif -%}
-{% endmacro %}
+    {%- endif -%}
+  {%- endif -%}
+
+{%- endmacro -%}

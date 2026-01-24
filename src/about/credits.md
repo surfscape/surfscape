@@ -14,7 +14,6 @@ order: 4
 
 - [Lucide](https://lucide.dev) - Icon pack
 - [Geist by Vercel](https://vercel.com/font) - Website font (we use a heavily optimized version, made possible with the project [fontTools](https://fonttools.readthedocs.io/en/stable/index.html))
-- [Frutiger Aero Archive](https://frutigeraeroarchive.org/wallpapers) - Source for the background images used on the page headers
 
 ## Development
 
