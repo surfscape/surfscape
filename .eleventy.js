@@ -23,7 +23,6 @@ export default function (eleventyConfig) {
   if (process.env.BUILD_TYPE == "production") {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
       formats: ["avif", "webp", "png"],
-      widths: ["auto"],
       htmlOptions: {
         imgAttributes: {
           loading: "lazy",

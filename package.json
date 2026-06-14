@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "rm -rf ./_site && eleventy --serve --watch",
+    "start-p": "rm -rf ./_site && BUILD_TYPE=production eleventy --serve --watch",
     "start-d": "eleventy --serve",
     "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
     "build": "eleventy",

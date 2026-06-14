@@ -16,14 +16,12 @@ hero:
 
 ## Products
 
-test
-
 <div class="auto-grid">
 {% for item in collections.projects %}
 {% if loop.index <= 2 %}
 <a href="{{item.url}}" class="card">
 <div class="img-container">
-<img src="/public/{{item.data.title | slugify}}_pr.png" alt="">
+<img src="/public/{{item.data.title | slugify}}_pr.png" alt="" width="572">
 </div>
 <div class="card-content">
 <h3>{{item.data.title}}</h3>

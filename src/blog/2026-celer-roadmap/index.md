@@ -39,7 +39,7 @@ Celer currently has this scattered, some code resides in the Power Module view m
 The current settings window works, but it's pretty cumbersome to add new preferences, not only that, it's also built in a way where the user needs to apply their changes manually instead of the app handling it.
 
 <figure>
-<img src="celer-old-settings.png" alt="">
+<img src="celer-old-settings.png" alt="" width="600">
 <figcaption>Old Celer settings window</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ It would be nicer to have something that is more organized, easier to use, easie
 Although development has started on this, it's far from ready, but it's looking much nicer that the older window!
 
 <figure>
-<img src="celer-new-settings.png" alt="">
+<img src="celer-new-settings.png" alt="" width="600">
 <figcaption>New Celer settings window</figcaption>
 </figure>
 

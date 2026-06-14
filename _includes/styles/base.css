@@ -239,6 +239,12 @@ figure figcaption {
   margin: 0.5em 0;
 }
 
+figure picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

@@ -60,6 +60,10 @@ a.card {
     border-radius: 0.25em;
 }
 
+.card>.img-container picture {
+    max-height: 250px;
+}
+
 .card:has(.card-content) {
     gap: 0;
 }
