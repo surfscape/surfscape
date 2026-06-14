@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{page.lang}}">
-  {% include "head.njk" %}
-  <body id="app">
-    <a href="#main-content" class="acs-skip">Skip to main content</a>
-    {% include "navigation.njk" %}
-    {% if alert %}
-      <div role="alert" class="steel-notice steel-notice--{{alert.type or "info"}}">
-        {% icon alert.icon or "lucide:info",
-        width = "17",
-        height = "17" %}
-        {{alert.message}}
-      </div>
-    {% endif %}
-    {% include "header.njk" %}
+{% include "head.njk" %}
 
-    {% block main %}
-      <main class="page-main">
-        <article id="main-content" class="stack">
-          {{ content | safe }}
-        </article>
-      </main>
-    {% endblock main %}
-    {% include "footer.njk" %}
-    {% if modules.glightbox %}
-      <script src="/public/scripts/glightbox.min.js"></script>
-      <script type="text/javascript">
-        const lightbox = GLightbox();
-      </script>
-    {% endif %}
-  </body>
+<body id="app">
+  <a href="#main-content" class="acs-skip">Skip to main content</a>
+  {% include "navigation.njk" %}
+  {% if alert %}
+  <div role="alert" class="steel-notice steel-notice--{{alert.type or " info"}}">
+    {% icon alert.icon or "lucide:info",
+    width = "17",
+    height = "17" %}
+    {{alert.message}}
+  </div>
+  {% endif %}
+  {% include "breadcrumbs.njk" %}
+  {% include "header.njk" %}
+  {% block main %}
+  <main class="page-main container">
+    <article id="main-content" class="stack">
+      {{ content | safe }}
+    </article>
+  </main>
+  {% endblock main %}
+  {% include "footer.njk" %}
+  {% if modules.glightbox %}
+  <script src="/public/scripts/glightbox.min.js"></script>
+  <script type="text/javascript">
+    const lightbox = GLightbox();
+  </script>
+  {% endif %}
+</body>
+
 </html>

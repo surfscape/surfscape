@@ -1,32 +1,45 @@
-<header class="page-header stack">
-    {% if hero.title %}
-        {% set hero_title = hero.title | safe %}
-    {% endif %}
-    <h1>{{ hero_title or title or meta.title}}</h1>
-    {% if description != false %}
-        <p class="subtitle">{{hero.description or description or meta.description}}</p>
-    {% endif %}
-    {% if hero.actions %}
-        <div class="header-actions">
-            {% for item in hero.actions %}
-                <a href="{{item.link}}" class="button {% if not item.type -%}button--primary{% else -%}steel-button--{{item.type}}{%- endif -%}">{{item.label}}
-                    {%if item.icon %}{% icon item.icon,
-                        width = "17",
-                        height = "17" %}{%endif%}</a>
+{% if hero.title %}
+{% set hero_title = hero.title | safe %}
+{% endif %}
+
+<header class="page-header">
+    <div class="page-header-container container">
+        <div class="page-header-meta stack">
+            <h1>{{ hero_title or title or meta.title}}</h1>
+            {% if description != false %}
+            <p class="subtitle">{{hero.description or description or meta.description}}</p>
+            {% endif %}
+            {% if hero.actions %}
+            <div class="header-actions">
+                {% for item in hero.actions %}
+                <a href="{{item.link}}"
+                    class="button {% if not item.type -%}button--primary{% else -%}steel-button--{{item.type}}{%- endif -%}">{{item.label}}
+                    {% if item.icon %}
+                    {% icon item.icon, width = "17", height = "17" %}
+                    {% endif %}
+                </a>
                 {% endfor %}
             </div>
-        {% endif %}
-        {% if hero.footer %}
+            {% endif %}
+            {% if hero.footer %}
             <p style="font-size:0.9em; opacity:0.8;">{{hero.footer | safe }}</p>
-        {% endif %}
-        {% if date %}
+            {% endif %}
+            {% if date %}
             <p>
-            Published in  <time datetime="{{date}}">{{date | formatPostDate}}</time>
+                Published in <time datetime="{{date}}" title="{{date}}">{{date | formatPostDate}}</time>
             </p>
-        {% endif %}
-        {% if modified %}
+            {% endif %}
+            {% if modified %}
             <p>
-            Modified in  <time datetime="{{modified}}">{{modified | formatPostDate}}</time>
+                Modified in <time datetime="{{modified}}" title="{{modified}}">{{modified | formatPostDate}}</time>
             </p>
+            {% endif %}
+            {% if author %}
+                <p>Written by: <a href="{{authors[author].website}}">{{authors[author].name}}</a></p>
+            {% endif %}
+        </div>
+        {% if banner %}
+        <img src="/public/{{banner}}" alt="" height="375">
         {% endif %}
-    </header>
+    </div>
+</header>

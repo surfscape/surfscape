@@ -1,14 +1,16 @@
 <footer class="main-footer">
-    <section>
-        <p>&copy; 2022 - 2026 <a href="/about/team">SurfScape Team</a> and <a href="https://github.com/surfscape/surfscape/graphs/contributors">contributors</a>.</p>
-        <a href="/privacy">Privacy Policy</a>
-        <p>Made in Portugal ❤</p>
-    </section>
-    <nav>
-        {% for item in meta.socials -%}
+    <div class="main-footer-container container">
+        <section>
+            <p>&copy; 2022 - 2026 SurfScape</p>
+            <p>Made in Portugal ❤</p>
+            <a href="/privacy">Privacy Policy</a>
+        </section>
+        <nav id="socials">
+            {% for item in meta.socials -%}
             <a href="{{item.url}}" rel="me">
                 {% icon item.icon %}
                 {{item.name}}</a>
-        {%- endfor -%}
-    </nav>
+            {%- endfor -%}
+        </nav>
+    </div>
 </footer>

@@ -1,0 +1,14 @@
+{%- macro imageGallery(images = false) -%}
+    <div class="image-gallery auto-grid">
+        {%- if images.length > 0 -%}
+                {%- for image in images -%}
+                <figure class="image-gallery-figure">
+                    <a href="{{ image.src }}" class="glightbox">
+                        <img src="{{ image.src }}" alt="{{image.alt}}" />
+                    </a>
+                    <figcaption>{{image.label}}</figcaption>
+                    </figure>
+                {%- endfor -%}
+        {%- endif -%}
+    </div>
+{%- endmacro -%}

@@ -1,0 +1,29 @@
+{% if eleventyNavigation.key and eleventyNavigation.key != "Home" and excludeFromNavigation != true %}
+    {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {includeSelf: true}) %}
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+    <div class="breadcrumb-container container">
+        <ol role="list">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            {% for crumb in navPages %}
+                {% if crumb.url %}
+                {% icon "lucide:chevron-right" %}
+                    {% if not loop.last %}
+                        <li>
+                            <a href="{{crumb.url}}">{{crumb.key}}</a>
+                        </li>
+                        
+                    {% else %}
+                        <li>
+                            <a href=""aria-current="page">
+                                <b>{{crumb.key}}</b>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ol>
+        </div>
+    </nav>
+{% endif %}

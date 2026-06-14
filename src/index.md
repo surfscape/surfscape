@@ -1,49 +1,45 @@
 ---
+key: Home
 hero:
-  title: "The SurfScape Project"
-  description: "A collective focused on developing ethical software and services with user choice and privacy in mind."
+  title: "SurfScape Collective"
+  description: "Developing ethical software and services with user choice and privacy in mind."
   backdrop: "/public/homepage_hero_banner.png"
   actions:
-    - label: Discover
+    - label: Learn More
       link: "#main-content"
       icon: lucide:corner-right-down
-    - label: Support Us
-      link: about/support
+    - label: Donate
+      link: donate
       type: minimal
-      icon: lucide:heart-handshake
-key: Home
+      icon: lucide:heart
 ---
 
-## Welcome to SurfScape!
+## Products
 
-We are an umbrella focused on creating software and services that respect user freedom, privacy, and promote ethical development practices.
-
-## Latest News
-
-{% for post in collections.news %}
-{% if loop.first %}
-
-{% postCard post %}
-
-{% endif %}
-{% endfor %}
-
-## Projects
+test
 
 <div class="auto-grid">
-
-{{ linkCard(title="Celer", description="The advanced toolbox for Windows", url ="/celer",title_image={src:"/public/celer.png"} ) }}
-
-{{ linkCard(title="Nuage", description="The weather app for minimalists", url ="/projects/nuage" ) }}
-
+{% for item in collections.projects %}
+{% if loop.index <= 2 %}
+<a href="{{item.url}}" class="card">
+<div class="img-container">
+<img src="/public/{{item.data.title | slugify}}_pr.png" alt="">
 </div>
-
-## Links & Friends
-
-<div style="display: flex; gap:0.5em;">
-
-{% for item in buttons %}
-<a href="{{item.url}}" aria-label="{{item.name}}" title="{{item.name}}" class="old-button"><img src="/public/buttons/{{item.img}}" alt="" aria-hidden="true" eleventy:ignore ></a>
+<div class="card-content">
+<h3>{{item.data.title}}</h3>
+<p>{{item.data.description}}</p>
+</div>
+</a>
+{% endif %}
 {% endfor %}
-
 </div>
+
+<a href="/products" class="button">View more {% lucide "chevron-right" %}</a>
+
+## Latest Posts
+
+{% for post in collections.blog %}
+
+- [{{ post.data.title }}]({{post.url}}) - <time datetime="{{post.date}}">{{post.date | formatPostDate}}</time>
+
+{% endfor %}

@@ -2,54 +2,52 @@
 
 {% set mainCategories = [] %}
 {% for item in allNavItems %}
-    {% if item.data.eleventyNavigation.collection == "main" %}
-        {% set mainCategories = mainCategories.concat([item]) %}
-    {% endif %}
+{% if item.collection == "Main" and item.key != "Home" %}
+{% set mainCategories = mainCategories.concat([item]) %}
+{% endif %}
 {% endfor %}
 
 <header class="main-header">
-    <a href="/">SurfScape</a>
-    <p class="subtitle">Free and open source software development</p>
-    {% if mainCategories.length > 0 %}
+    <div class="main-header-container container">
+        <a href="/" aria-label="Go home" title="Go home"><img src="/public/wordmark.svg" alt="SurfScape Flower Wordmark"
+                height="48"></a>
+        {% if mainCategories.length >= 0 %}
         <nav class="main-nav" aria-label="Main navigation">
             {% for item in mainCategories %}
-                {% set isActive = (item.url == page.url)or(item.url != "/" and page.url.startsWith(item.url)) %}
-                <a 
-               href="{{ item.url | url }}" 
-               {% if isActive %}aria-current="page"{% endif %}>
-                    {{ item.key }}
-                </a>
+            {% set isActive = (item.url == page.url)or(item.url != "/" and page.url.startsWith(item.url)) %}
+            <a href="{{ item.url | url }}" {% if isActive %}aria-current="page" {% endif %}>{{ item.key }}</a>
             {% endfor %}
         </nav>
-    {% endif %}
+        {% endif %}
+    </div>
 </header>
 
 {% set activeMainCategory = null %}
 {% for category in mainCategories %}
-    {% if (category.url == page.url) 
-        or(category.url != "/" and page.url.startsWith(category.url)) %}
-        {% set activeMainCategory = category %}
-    {% endif %}
+{% if (category.url == page.url)
+or(category.url != "/" and page.url.startsWith(category.url)) %}
+{% set activeMainCategory = category %}
+{% endif %}
 {% endfor %}
 
 {% if activeMainCategory %}
-    {% set subNavLinks = collections.all | eleventyNavigation(activeMainCategory.key) %}
-    {% if subNavLinks.length > 0 %}
-        <nav class="subnav" aria-label="Sub-navigation for {{ activeMainCategory.key }}">
-            <a
-                   href="{{ activeMainCategory.url | url }}"
-                   {% if page.url == activeMainCategory.url %}aria-current="page"{% endif %}>
-                {{ activeMainCategory.data.navigation.subnav.label or "Overview" }}
-            </a>
-            {% for subItem in subNavLinks %}
-                {% if not subItem.data.pagination %}
-                    <a 
-                       href="{{ subItem.url | url }}"
-                       {% if subItem.url == page.url %}aria-current="page"{% endif %}>
-                        {{ subItem.title or subItem.key }}
-                    </a>
-                {% endif %}
-            {% endfor %}
-        </nav>
-    {% endif %}
+{% set subNavLinks = collections.all | eleventyNavigation(activeMainCategory.key) %}
+{% if subnav != false and subNavLinks.length > 0 %}
+<div class="subnav-wrapper">
+    <nav class="subnav" aria-label="Sub-navigation for {{ activeMainCategory.key }}">
+
+        <a href="{{ activeMainCategory.url | url }}" {% if page.url==activeMainCategory.url %}aria-current="page" {%
+            endif %}>
+            {{ activeMainCategory.data.navigation.subnav.label or "Overview" }}
+        </a>
+        {% for subItem in subNavLinks %}
+        {% if not subItem.data.pagination and subItem.data.subnav != false %}
+        <a href="{{ subItem.url | url }}" {% if subItem.url==page.url %}aria-current="page" {% endif %}>
+            {{ subItem.title or subItem.key }}
+        </a>
+        {% endif %}
+        {% endfor %}
+    </nav>
+</div>
+{% endif %}
 {% endif %}

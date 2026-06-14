@@ -1,0 +1,49 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+{% set allNavItems = collections.all | eleventyNavigation %}
+
+{% set mainCategories = [] %}
+{% for item in allNavItems %}
+{% for child in item.children %}
+        {% set mainCategories = mainCategories.concat([child]) %}
+{% endfor %}
+    
+{% endfor %}
+{% set activeMainCategory = null %}
+{% for category in mainCategories %}
+    {% if (category.url == page.url) 
+        or(category.url != "/" and page.url.startsWith(category.url)) %}
+        {% set activeMainCategory = category %}
+    {% endif %}
+{% endfor %}
+
+          <main class="container">
+          {% if activeMainCategory %}
+    {% set subNavLinks = collections.all | eleventyNavigation(activeMainCategory.key) %}
+    {% if subNavLinks.length > 0 %}
+        <nav class="subnav-tabs" id="project-nav" aria-label="Navigation for {{ activeMainCategory.key }} project">
+        
+            <a
+                   href="{{ activeMainCategory.url | url }}"
+                   {% if page.url == activeMainCategory.url %}aria-current="page"{% endif %}>
+                {{ activeMainCategory.data.navigation.subnav.label or "Overview" }}
+            </a>
+            {% for subItem in subNavLinks %}
+                {% if not subItem.data.pagination %}
+                    <a 
+                       href="{{ subItem.url | url }}#project-nav"
+                       {% if subItem.url == page.url %}aria-current="page"{% endif %}>
+                        {{ subItem.title or subItem.key }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+            
+        </nav>
+    {% endif %}
+{% endif %}
+        <article id="main-content" class="stack">
+            {{ content | safe }}
+        </article>
+    </main>
+{% endblock main %}

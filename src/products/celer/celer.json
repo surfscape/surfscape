@@ -1,0 +1,21 @@
+{
+    "title": "Celer",
+    "description": "Take back control of your Windows system",
+    "banner": "celer_pr.png",
+    "hero": {
+        "actions": [
+            {
+                "label": "Version 1.0.0 Beta 2",
+                "link": "https://github.com/surfscape/celer/releases/download/v1.0.0-beta.2/setup_release.exe",
+                "icon": "lucide:download"
+            },
+            {
+                "label": "Source Code",
+                "link": "https://github.com/surfscape/celer",
+                "icon": "simple:github",
+                "type": "minimal"
+            }
+        ],
+        "footer": "Free as in <i>libre</i> — no telemetry. Ever."
+    }
+}

@@ -1,10 +1,8 @@
 ---
 title: Donate
-description: Library of resources about the web and privacy made by us and others.
-collection: main
-order: 6
+collection: Main
+description: Support the SurfScape collective to keep it going foward
+order: 4
 ---
 
-## Ko-fi
-
-SurfScape is a collective created and maintained by [ReduxFlakes](https://reduxflakes.nekoweb.org) and so donations are done through their [Ko-fi](https://ko-fi.com/reduxflakes) page.
+If you'd like to support SurfScape moneratarly you can do so by donating to [ReduxFlakes](https://reduxflakes.nekoweb.org/support/) directly.

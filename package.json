@@ -1,14 +1,15 @@
 {
-  "private": "true",
   "name": "surfscape",
-  "description": "Source code for the SurfScape website",
+  "description": "Source code for the SurfScape website in Eleventy",
   "type": "module",
+  "private": "true",
   "repository": {
     "type": "git",
     "url": "https://github.com/surfscape/surfscape.git"
   },
   "scripts": {
-    "start": "eleventy --serve --watch",
+    "start": "rm -rf ./_site && eleventy --serve --watch",
+    "start-d": "eleventy --serve",
     "html-minify": "html-minifier-terser --config-file=.html-minifier.json --input-dir=_site --output-dir=_site --file-ext=html",
     "build": "eleventy",
     "build:prod": "cross-env BUILD_TYPE=production eleventy",
@@ -21,12 +22,11 @@
   "author": "The SurfScape Team",
   "license": "AGPL-3.0-only",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy": "4.0.0-alpha.7",
     "@11ty/eleventy-img": "6.0.1",
     "@11ty/eleventy-navigation": "1.0.4",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "autoprefixer": "^10.4.23",
-    "cheerio": "^1.2.0",
     "cross-env": "^7.0.3",
     "cssnano": "^7.1.2",
     "html-minifier-terser": "^7.2.0",
@@ -40,6 +40,7 @@
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.4.2",
     "@grimlink/eleventy-plugin-lucide-icons": "^2.1.11",
+    "@uncenter/eleventy-plugin-toc": "^2.1.2",
     "eleventy-plugin-icons": "^4.5.7",
     "lucide-static": "^0.509.0",
     "simple-icons": "^14.15.0"

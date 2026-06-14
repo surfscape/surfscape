@@ -1,6 +1,6 @@
 export default {
   title: "SurfScape",
-  description: "Developing ethical software and services with heavy focus on user choice, privacy, and minimalism.",
+  description: "Collective developing ethical software and services with focus on user choice, privacy, and minimalism.",
   url: "https://surfscape.eu",
   lang: "en",
   socials: [
@@ -8,6 +8,16 @@ export default {
       name: "GitHub",
       icon: "simple:github",
       url: "https://github.com/surfscape",
+    },
+    {
+      name: "Bluesky",
+      icon: "simple:bluesky",
+      url: "https://bsky.app/profile/surfscape.eu",
+    },
+    {
+      name: "Instragram",
+      icon: "simple:instagram",
+      url: "https://www.instagram.com/surfscape.eu/",
     },
     {
       name: "Mastodon",

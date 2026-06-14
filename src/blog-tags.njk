@@ -1,0 +1,31 @@
+---
+permalink: "/blog/tagged/{{ tag | slugify }}/"
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: "{{ tag }}"
+    description: "{{ tagDescriptions[tag] or 'Posts tagged with ' + tag }}"
+    eleventyNavigation:
+        parent: Blog
+        key: "{{ tag }}"
+---
+
+{% set taglist = collections[tag] | reverse %}
+{% for post in taglist %}
+    <section class="card post-card">
+        <h2>
+            <a href="{{post.url}}">{{post.data.title}}</a>
+        </h2>
+<div class="auto-flex">
+  {%- if post.data.tags -%}
+        <a class="label" href="tagged/{{ post.data.tags | slugify }}/">{{ post.data.tags }}</a>
+  {%- endif -%}
+<p><small><time datetime="{{post.date}}">{{post.date | formatPostDate}}</time></small></p>
+        {% if post.data.description %}
+            <p>{{post.data.description}}</p>
+        {% endif %}
+    </section>
+{% endfor %}

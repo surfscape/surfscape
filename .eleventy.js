@@ -7,25 +7,31 @@ import postcssConfig from "postcss-load-config";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { DateTime } from "luxon";
+import pluginTOC from '@uncenter/eleventy-plugin-toc';
 import pluginIcons from 'eleventy-plugin-icons';
 import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 
 import filters from "./_config/filters.js";
+import process from "node:process";
 
-export default async function (eleventyConfig) {
+export default function (eleventyConfig) {
+  eleventyConfig.addWatchTarget("./src/*");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["avif", "webp", "png"],
-    widths: ["auto"],
-    htmlOptions: {
-      imgAttributes: {
-        loading: "lazy",
-        decoding: "async",
+  eleventyConfig.addPlugin(pluginTOC);
+  if (process.env.BUILD_TYPE == "production") {
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+      formats: ["avif", "webp", "png"],
+      widths: ["auto"],
+      htmlOptions: {
+        imgAttributes: {
+          loading: "lazy",
+          decoding: "async",
+        },
       },
-    },
-  });
+    });
+  }
   eleventyConfig.addPlugin(pluginIcons, {
     sources: [{ name: 'lucide', path: 'node_modules/lucide-static/icons' },
     { name: 'simple', path: 'node_modules/simple-icons/icons' }],
@@ -44,11 +50,18 @@ export default async function (eleventyConfig) {
   });
 
   /* collections */
-  eleventyConfig.addCollection("news", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/news/content/*.md").sort((a, b) => {
+  eleventyConfig.addCollection("blog", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/**/*.md").sort((a, b) => {
       return b.date - a.date;
     });
   });
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.{svg,webp,png,jpg,jpeg,gif}");
+  eleventyConfig.addCollection("projects", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/products/**/index.md").sort((a, b) => {
+      return a.data.order - b.data.order;
+    });
+  });
+
 
   /* shortcodes */
   eleventyConfig.addShortcode("postCard", function (post) {
@@ -82,7 +95,7 @@ export default async function (eleventyConfig) {
     permalink: markdownItAnchor.permalink.ariaHidden({
       placement: "after",
       class: "anchor",
-      symbol: "#",
+      symbol: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon lucide lucide-link-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
       ariaHidden: false,
     }),
     level: [1, 2, 3, 4],
@@ -92,7 +105,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPreprocessor("macro-inject", "njk,md", (data, content) => {
     return (
-      `{%- from "components/card.njk" import card, linkCard -%}\n{%- from "components/imageShowcase.njk" import imageShowcase -%}\n` +
+      `{%- from "components/card.njk" import card, linkCard -%}\n{%- from "components/imageShowcase.njk" import imageShowcase -%}\n{%- from "components/imageGallery.njk" import imageGallery -%}\n` +
       content
     );
   });
@@ -102,7 +115,7 @@ export default async function (eleventyConfig) {
     transforms: [
       async function (content) {
         const { plugins } = await postcssConfig();
-        let result = await postcss(plugins).process(content, {
+        const result = await postcss(plugins).process(content, {
           from: this.page.inputPath,
           to: null,
         });

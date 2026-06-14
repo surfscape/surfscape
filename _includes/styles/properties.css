@@ -1,22 +1,27 @@
+/* @link https://utopia.fyi/type/calculator?c=360,17,1.2,1024,19,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
 :root {
-  --max-viewport: 720px;
-  --background: hsl(0, 0%, 6%);
-  --container: hsla(0, 0%, 20%, 0.25);
-  --container-state: hsla(0, 0%, 20%, 0.5);
-  --stroke: hsl(0, 0%, 18%);
-  --primary: #99CFFF;
+  --type--2: clamp(0.6944rem, 0.6474rem + 0.2092vw, 0.7813rem);
+  --type--1: clamp(0.8333rem, 0.7769rem + 0.251vw, 0.9375rem);
+  --type-0: clamp(1rem, 0.9322rem + 0.3012vw, 1.15rem);
+  --type-1: clamp(1.15rem, 1.1087rem + 0.3614vw, 1.25rem);
+  --type-2: clamp(1.2rem, 1.1924rem + 0.4037vw, 1.34rem);
+  --type-3: clamp(1.3rem, 1.2509rem + 0.4535vw, 1.5rem);
+  --type-4: clamp(2.0736rem, 1.9331rem + 0.6246vw, 2.3328rem);
+  --type-5: clamp(2.4883rem, 2.3197rem + 0.7495vw, 2.7994rem);
+}
+
+:root {
+  --viewport: 1200px;
+  --background: hsl(208, 3%, 12%);
+  --container: hsla(208, 3%, 100%, 0.1);
+  --container-low: hsla(208, 3%, 80%, 0.1);
+  --stroke: hsla(208, 3%, 80%, 0.2);
+
   --accent: hsl(208, 56%, 67%);
-  --accent-foreground: hsl(208, 44%, 21%);
-  --foreground: hsl(255, 0%, 65%);
-  --foreground-primary: hsl(255, 0%, 90%);
 
-  --steel-line-height: 1.4rem;
+  --foreground: hsla(208, 3%, 72%, 0.9);
+  --foreground-primary: hsl(208, 3%, 90%);
 
-  --steel-desktop-border: 1px solid var(--stroke);
-  --steel-default-border: 1px solid var(--stroke);
-  --steel-mobile-border: 1px solid var(--stroke);
-
-  --steel-default-padding: 1.25rem;
-  --steel-default-lineheight-padding: calc(2.25rem - var(--steel-line-height));
   color-scheme: dark;
 }
