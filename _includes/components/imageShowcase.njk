@@ -1,13 +1,13 @@
 {%- macro imageShowcase(mainImageSrc = '', mainImageAlt = '', images = false) -%}
     <div class="image-showcase">
         <a href="{{ mainImageSrc }}" class="glightbox">
-            <img src="{{mainImageSrc }}" alt="{{mainImageAlt}}" width="820"/>
+            <img src="{{mainImageSrc }}" alt="{{mainImageAlt}}" />
         </a>
         {%- if images.length > 0 -%}
             <div class="image-showcase-thumbnails">
                 {%- for image in images -%}
                     <a href="{{ image.src }}" class="glightbox">
-                        <img src="{{ image.src }}" alt="{{image.alt}}" width="300"/>
+                        <img src="{{ image.src }}" alt="{{image.alt}}" />
                     </a>
                 {%- endfor -%}
             </div>

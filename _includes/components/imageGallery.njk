@@ -4,11 +4,11 @@
                 {%- for image in images -%}
                 <figure class="image-gallery-figure">
                     <a href="{{ image.src }}" class="glightbox">
-                        <img src="{{ image.src }}" alt="{{image.alt}}" width="400" />
+                        <img src="{{ image.src }}" alt="{{image.alt}}" />
                     </a>
                     <figcaption>{{image.label}}</figcaption>
                     </figure>
                 {%- endfor -%}
         {%- endif -%}
     </div>
-{%- endmacro -%}
+{%- endmacro -%}width="400"
